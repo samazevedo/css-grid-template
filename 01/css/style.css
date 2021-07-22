@@ -19,9 +19,26 @@ main p {
 }
 .logo {
     grid-area: logo;
+    align-self: center;
 }
 .main-menu {
     grid-area:menu;
+    align-self:  center;
+    justify-self: end;
+}
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.main-menu_item {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+.main-menu .main-menu_item:last-of-type {
+    margin-right: 0;
 }
 .content-area {
     grid-area: content;
@@ -41,5 +58,13 @@ main p {
     grid-template-columns: 2fr 6fr 4fr; // fr - fraction of th free space
     // 2 + 6 + 4 = 12 // 6 /12 = 0.5 = 50% free space
     grid-gap: 2rem 1rem;  // free spacing between the rows and columns
-    
+    grid-template-rows: 3rem;  
+    grid-template-areas: 
+    "logo menu menu" ;
+}
+.main-header {
+    height: 3rem;
+}
+.logo {
+
 }
