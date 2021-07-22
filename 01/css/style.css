@@ -3,7 +3,7 @@
 }
 html {
     font-size: 16px;
-    font-family: Georfia, serif;
+    font-family: Georgia, serif;
 }
 body {
     background-color: #fbfbfb;
@@ -20,6 +20,8 @@ main p {
 .logo {
     grid-area: logo;
     align-self: center;
+    height: 100%;
+    line-height: 3rem;
 }
 .main-menu {
     grid-area:menu;
@@ -45,9 +47,27 @@ main p {
 }
 .sidebar {
     grid-area: sidebar;
+    padding: 1rem;
+}
+.sponsors {
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-columns-gap: 1rem;
+    
 }
 .sponsors-wrapper {
-    grid-are:sponsors;
+    grid-area:sponsors;
+}
+.sponsor {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+    border-radius: 0.625rem;
+    place-self: center;
+    display:inline-flex;
+    align-item: center;
+    justify-content: center;
 }
 .footer {
     grid-area: footer;
@@ -60,11 +80,11 @@ main p {
     grid-gap: 2rem 1rem;  // free spacing between the rows and columns
     grid-template-rows: 3rem;  
     grid-template-areas: 
-    "logo menu menu" ;
+    "logo menu menu" 
+    "content content sidebar"
+    "sponsors sponsors sponsors"
+    "footer footer footer" ;
 }
 .main-header {
     height: 3rem;
-}
-.logo {
-
 }
