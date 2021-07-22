@@ -88,3 +88,52 @@ main p {
 .main-header {
     height: 3rem;
 }
+
+// large screens
+@media all and (max-width: 992px) {
+    .container {
+        margin: 0 1rem;
+    }
+    .sponsors {
+        grid-column-gap: 0.5rem;
+    }
+}
+// medium screens
+// main content area and sidebar occupy all columns
+@media all and (max-width: 768px) {
+    .container {
+        grid-template-areas:
+        "logo menu menu"
+        "content content content"
+        "sidebar sidebar sidebar"
+        "sponsors sponsors sponsors"
+        "footer footer footer";
+    }
+    html {
+        font-size: 14px;
+    }
+    .sponsors {
+        grid-template-columns: 1fr;
+        grid-columns-gap: 0;
+        grid-row-gap: 1rem;
+    }
+}
+
+// small screens
+@media all and (max-width: 540px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "logo"
+        "menu"
+        "content"
+        "sidebar"
+        "sponsors"
+        "footer";
+        grid-gap: 2rem 0;
+    }
+    .main-menu {
+        justify-self: start;
+    }
+}
